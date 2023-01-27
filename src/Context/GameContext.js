@@ -16,6 +16,7 @@ const GameProvider = ({ children }) => {
   const [player, setPlayer] = useState('X');
   const [isActive, setIsActive] = useState(true);
   const [gameMessage, setGameMessage] = useState('');
+
   return (
     <GameContext.Provider
       value={{

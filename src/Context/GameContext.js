@@ -14,8 +14,21 @@ const GameProvider = ({ children }) => {
     { space: 8, content: '' },
   ]);
   const [player, setPlayer] = useState('X');
+  const [isActive, setIsActive] = useState(true);
+  const [gameMessage, setGameMessage] = useState('');
   return (
-    <GameContext.Provider value={{ board, setBoard, player, setPlayer }}>
+    <GameContext.Provider
+      value={{
+        board,
+        setBoard,
+        player,
+        setPlayer,
+        isActive,
+        setIsActive,
+        gameMessage,
+        setGameMessage,
+      }}
+    >
       {children}
     </GameContext.Provider>
   );

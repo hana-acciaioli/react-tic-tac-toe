@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  min-width: 40%;
+  max-width: fit-content;
+  background-color: antiquewhite;
+  margin: 3rem;
+  min-height: 6rem;
+  border: 0.5rem;
+  border-style: ridge;
+  border-radius: 2%;
+}

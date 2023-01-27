@@ -5,9 +5,11 @@
   height: 200px;
   border-radius: 2%;
   border-style: solid;
-  border-color: lightgray;
+  border-width: 0.5rem;
+  border-color: rgb(203, 159, 233);
   justify-items: center;
   justify-content: center;
+  margin: 0;
 }
 
 .button {

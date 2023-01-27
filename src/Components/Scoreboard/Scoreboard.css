@@ -6,10 +6,12 @@
   justify-self: center;
   min-width: 40%;
   max-width: fit-content;
-  background-color: antiquewhite;
+  background-color: rgb(242, 215, 250);
   margin: 3rem;
   min-height: 6rem;
   border: 0.5rem;
   border-style: ridge;
   border-radius: 2%;
+  color: rgb(86, 1, 143);
+  border-color: rgb(182, 127, 233);
 }

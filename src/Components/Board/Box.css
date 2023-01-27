@@ -12,4 +12,7 @@
 
 .box-container img {
   width: fit-content;
+  /* backdrop-filter: brightness(2); */
+  /* filter: hue-rotate(90deg); */
+  filter: brightness(1.1);
 }

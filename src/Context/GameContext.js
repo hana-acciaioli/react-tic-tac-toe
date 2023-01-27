@@ -13,7 +13,12 @@ const GameProvider = ({ children }) => {
     { space: 7, content: '' },
     { space: 8, content: '' },
   ]);
-  return <GameContext.Provider value={{ board, setBoard }}>{children}</GameContext.Provider>;
+  const [player, setPlayer] = useState('X');
+  return (
+    <GameContext.Provider value={{ board, setBoard, player, setPlayer }}>
+      {children}
+    </GameContext.Provider>
+  );
 };
 
 const useGameContext = () => {

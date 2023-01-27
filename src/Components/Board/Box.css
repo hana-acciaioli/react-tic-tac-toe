@@ -1,8 +1,15 @@
 .box-container {
+  display: flex;
   width: 250px;
-  background-color: antiquewhite;
+  background-color: rgb(253, 253, 253);
   height: 200px;
   border-radius: 2%;
   border-style: solid;
   border-color: lightgray;
+  justify-items: center;
+  justify-content: center;
+}
+
+.box-container img {
+  width: fit-content;
 }

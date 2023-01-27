@@ -13,13 +13,6 @@ export default function Box({ box }) {
     {
       player === 'X' ? setPlayer('O') : setPlayer('X');
     }
-    checkForWin();
-  }
-  function checkForWin() {
-    {
-      //   box.space === box[1] && box[1] === box[2](setGameMessage('X is the winner'));
-      console.log();
-    }
   }
 
   return (

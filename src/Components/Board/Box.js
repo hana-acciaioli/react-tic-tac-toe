@@ -8,9 +8,10 @@ export default function Box({ box }) {
   function handleClick() {
     box.content = player;
     const newBoard = [...board];
-
     setBoard(newBoard);
-    console.log(board);
+    {
+      player === 'X' ? setPlayer('O') : setPlayer('X');
+    }
   }
 
   return (

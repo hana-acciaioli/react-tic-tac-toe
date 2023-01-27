@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 
 const GameContext = createContext();
 const GameProvider = ({ children }) => {
@@ -15,7 +15,7 @@ const GameProvider = ({ children }) => {
   ]);
   const [player, setPlayer] = useState('X');
   const [isActive, setIsActive] = useState(true);
-  const [gameMessage, setGameMessage] = useState('');
+  const [gameMessage, setGameMessage] = useState(`You are up ${player}`);
   const [isCatsGame, setIsCatsGame] = useState(false);
   let winner = null;
 
@@ -96,6 +96,10 @@ const GameProvider = ({ children }) => {
       setIsActive(false);
     } else if (checkForCatsGame());
   };
+
+  useEffect(() => {
+    setGameMessage(`You are up ${player}!`);
+  }, [player]);
 
   checkGameStatus();
 

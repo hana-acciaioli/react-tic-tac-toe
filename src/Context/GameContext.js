@@ -101,7 +101,7 @@ const GameProvider = ({ children }) => {
   checkGameStatus();
 
   useEffect(() => {
-    const winner = checkForWin();
+    // const winner = checkForWin();
     if (winner) {
       setGameMessage(`You win ${winner}!`);
     } else if (catsGame === true) {
@@ -109,7 +109,7 @@ const GameProvider = ({ children }) => {
     } else {
       setGameMessage(`You are up ${player}!`);
     }
-  }, []);
+  }, [player, catsGame]);
 
   return (
     <GameContext.Provider

@@ -16,7 +16,7 @@ const GameProvider = ({ children }) => {
   const [player, setPlayer] = useState('X');
   const [isActive, setIsActive] = useState(true);
   const [gameMessage, setGameMessage] = useState(`You are up ${player}`);
-  const [isCatsGame, setIsCatsGame] = useState(false);
+  const [catsGame, setCatsGame] = useState(false);
   let winner = null;
 
   function checkForCatsGame() {
@@ -32,7 +32,8 @@ const GameProvider = ({ children }) => {
       board[7].content &&
       board[8].content
     ) {
-      setGameMessage('Cats Game!');
+      setCatsGame(true);
+      //   setGameMessage('Cats Game!');
       setIsActive(false);
     }
   }
@@ -92,16 +93,23 @@ const GameProvider = ({ children }) => {
     if (!isActive) return;
     const winner = checkForWin();
     if (winner) {
-      setGameMessage(`You win ${winner}!`);
+      //   setGameMessage(`You win ${winner}!`);
       setIsActive(false);
     } else if (checkForCatsGame());
   };
 
-  useEffect(() => {
-    setGameMessage(`You are up ${player}!`);
-  }, [player]);
-
   checkGameStatus();
+
+  useEffect(() => {
+    const winner = checkForWin();
+    if (winner) {
+      setGameMessage(`You win ${winner}!`);
+    } else if (catsGame === true) {
+      setGameMessage(`cats game!`);
+    } else {
+      setGameMessage(`You are up ${player}!`);
+    }
+  }, [player]);
 
   return (
     <GameContext.Provider
@@ -114,6 +122,8 @@ const GameProvider = ({ children }) => {
         setIsActive,
         gameMessage,
         setGameMessage,
+        catsGame,
+        setCatsGame,
       }}
     >
       {children}

@@ -3,8 +3,7 @@ import './Box.css';
 import { useGameContext } from '../../Context/GameContext.js';
 
 export default function Box({ box }) {
-  const { player, isActive, setPlayer, board, setBoard, setGameMessage, gameMessage } =
-    useGameContext();
+  const { player, isActive, setPlayer, board, setBoard } = useGameContext();
 
   function handleClick() {
     box.content = player;

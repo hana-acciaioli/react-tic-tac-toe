@@ -109,7 +109,7 @@ const GameProvider = ({ children }) => {
     } else {
       setGameMessage(`You are up ${player}!`);
     }
-  }, [player]);
+  }, [player, checkForWin, catsGame]);
 
   return (
     <GameContext.Provider

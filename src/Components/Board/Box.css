@@ -13,14 +13,9 @@
 }
 
 .button {
-  width: fit-content;
-  /* backdrop-filter: brightness(2); */
-  /* filter: hue-rotate(90deg); */
   filter: brightness(1.1);
 }
 .image {
   width: fit-content;
-  /* backdrop-filter: brightness(2); */
-  /* filter: hue-rotate(90deg); */
   filter: brightness(1.1);
 }

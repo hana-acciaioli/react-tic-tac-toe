@@ -42,6 +42,7 @@ const GameProvider = ({ children }) => {
       return (winner = `${board[8].content}`);
     }
     if (board[2].content === board[4].content && board[4].content === board[6].content) {
+      // eslint-disable-next-line no-unused-vars
       return (winner = `${board[6].content}`);
     }
   }

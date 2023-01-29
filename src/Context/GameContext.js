@@ -74,7 +74,7 @@ const GameProvider = ({ children }) => {
   checkGameStatus();
 
   useEffect(() => {
-    setGameMessage(`You are up ${player}!`);
+    setGameMessage(`You are are up ${player}!`);
   }, [player]);
 
   return (

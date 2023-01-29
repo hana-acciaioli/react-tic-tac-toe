@@ -24,18 +24,17 @@ export default function Scoreboard() {
 
   return (
     <div className="container">
-      <h1>Tic-Tac-Toe!</h1>
+      <h1>Tic-Tac-Toe</h1>
       {isActive ? (
         <p>{gameMessage}</p>
       ) : (
         <>
-          <p>{resultsMessage}</p>
+          <h2>{resultsMessage}</h2>
           <button className="play-again-button" onClick={() => handleNewGame()}>
             Play Again
           </button>
         </>
       )}
-      ;
     </div>
   );
 }

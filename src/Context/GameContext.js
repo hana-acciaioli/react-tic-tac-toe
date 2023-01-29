@@ -17,9 +17,9 @@ const GameProvider = ({ children }) => {
   const [isActive, setIsActive] = useState(true);
   const [gameMessage, setGameMessage] = useState(`You are up ${player}`);
   const [resultsMessage, setResultsMessage] = useState('');
-  let winner = null;
 
   function checkForWin() {
+    let winner = null;
     if (board[0].content === board[1].content && board[1].content === board[2].content) {
       return (winner = `${board[2].content}`);
     }

@@ -72,14 +72,6 @@ const GameProvider = ({ children }) => {
     } else return;
   }
 
-  //   function checkForWin() {
-  //     let winner = null;
-  //     switch (winner) {
-  //       case board[0].content === board[1].content && board[1].content === board[2].content:
-  //         winner = board[5].content;
-  //         break;
-  //     }
-  //   }
   const checkGameStatus = () => {
     if (!isActive) return;
     let winner = checkForWin();
